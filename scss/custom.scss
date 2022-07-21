@@ -1,0 +1,37 @@
+$primary: yellowgreen;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+body {
+    background: black;
+}
+.card {
+    border-radius: calc(0.26rem - 1px); /* this is what bootstrap used */
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    &__img {
+        object-fit: cover;
+        aspect-ratio: 1/0.7;
+        max-width: 100%;
+    }
+    &__body {
+        background-color: #2e2e2e;
+        padding: 1.5em;
+        & > h5 {
+            font-weight: bold;
+        }
+        & > p {
+            color: #c2c2c2;
+        }
+    }
+}
+    @media screen and (min-width: 575px) {
+    .interestBoxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5em;
+        justify-content: space-around;
+    }
+    }
